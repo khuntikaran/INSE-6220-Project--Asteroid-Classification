@@ -9,14 +9,14 @@ from sklearn.metrics import r2_score
 from sklearn.decomposition import PCA
 import numpy as np
 # Load the dataset
-file_path = 'data/processed_nasa_data.csv'  # Replace with the path to your processed dataset
+file_path = 'data/processed_nasa_data.csv'  
 data = pd.read_csv(file_path)
 
-# Separate features and target variable
+
 X = data.drop('Hazardous', axis=1)
 y = data['Hazardous']
 
-# Split the dataset into training and testing sets
+
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Initialize the KNN model
